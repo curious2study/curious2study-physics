@@ -122,8 +122,7 @@ Each chapter includes:
 1. **Start with Chapter 1** to establish foundational concepts
 2. **Watch the video lectures** for each section
 3. **Read the study guides** to reinforce key ideas
-4. **Work through problem sets** at your own pace
-5. **Focus on understanding** the "why" behind concepts, not just memorizing the "what"
+4. **Focus on understanding** the "why" behind concepts, not just memorizing the "what"
 
 ## Learning Approach
 
@@ -152,6 +151,14 @@ This project is licensed under the Creative Commons Attribution 4.0 Internationa
 
 Source materials based on OpenStax College Physics for AP® Courses 2e.
 Access for free at https://openstax.org.
+
+## Feedback & Suggestions
+
+Have questions or suggestions? Open an issue in this repository or visit the main Curious2Study hub.
+
+---
+
+*Last updated: 2026*
 
 ## Feedback & Suggestions
 
