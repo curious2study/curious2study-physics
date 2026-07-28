@@ -46,6 +46,12 @@
             height: 50px;
         }
 
+        .header-logo-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         .site-title {
             font-size: 24px;
             font-weight: 700;
@@ -64,88 +70,241 @@
             color: #60a5fa;
         }
 
-        /* Under Construction Section */
-        .construction {
-            padding: 100px 20px;
-            text-align: center;
-            background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
-            min-height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .construction-content {
-            max-width: 600px;
-        }
-
-        .construction-icon {
-            font-size: 80px;
-            margin-bottom: 30px;
-        }
-
-        .construction h1 {
-            font-size: 42px;
-            color: #1e3a8a;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .construction p {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-
-        .coming-soon {
-            background-color: #3b82f6;
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 30px;
-            font-weight: 600;
+            padding: 60px 20px;
+            text-align: center;
         }
 
-        .course-preview {
-            margin-top: 60px;
-            background: white;
-            padding: 40px;
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Resources Section */
+        .resources {
+            background-color: #f8fafc;
+            padding: 40px 20px;
+            margin: 40px auto;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
         }
 
-        .course-preview h2 {
-            font-size: 28px;
+        .resources h2 {
             color: #1e3a8a;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .resource-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
             margin-bottom: 30px;
         }
 
-        .chapters-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            text-align: left;
-        }
-
-        .chapter {
+        .resource-link {
+            background: white;
             padding: 20px;
-            background-color: #f8fafc;
+            border-radius: 6px;
             border-left: 4px solid #3b82f6;
-            border-radius: 4px;
+            transition: transform 0.2s ease;
         }
 
-        .chapter h3 {
+        .resource-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-link h3 {
             color: #1e3a8a;
             font-size: 16px;
             margin-bottom: 10px;
         }
 
-        .chapter p {
+        .resource-link p {
             font-size: 14px;
             color: #666;
+            margin-bottom: 12px;
+        }
+
+        .resource-link a {
+            display: inline-block;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .resource-link a:hover {
+            color: #1e3a8a;
+        }
+
+        /* Chapters Section */
+        .chapters {
+            padding: 40px 20px;
+        }
+
+        .chapters h2 {
+            color: #1e3a8a;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .chapter {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            overflow: hidden;
+        }
+
+        .chapter-header {
+            background-color: #f0f9ff;
+            padding: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .chapter-header:hover {
+            background-color: #e0f2fe;
+        }
+
+        .chapter-header h3 {
+            color: #1e3a8a;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .chapter-toggle {
+            color: #1e3a8a;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .chapter-content {
+            padding: 20px;
+            display: none;
+        }
+
+        .chapter-content.active {
+            display: block;
+        }
+
+        .section {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section-number {
+            font-weight: 600;
+            color: #1e3a8a;
+            font-size: 14px;
+        }
+
+        .section-title {
+            color: #333;
+            font-size: 16px;
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        .section-pages {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .section-link {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        .section-link:hover {
+            background-color: #1e3a8a;
+        }
+
+        .no-video {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: #e2e8f0;
+            color: #999;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: not-allowed;
+        }
+
+        .section-thumbnail {
+            display: inline-block;
+            margin-right: 12px;
+            vertical-align: top;
+            margin-bottom: 10px;
+        }
+
+        .section-thumbnail img {
+            width: 140px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .section-thumbnail img:hover {
+            transform: scale(1.05);
+        }
+
+        .section-thumbnail a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .section-info {
+            display: inline-block;
+            vertical-align: top;
+            flex: 1;
+        }
+
+        .combined-note {
+            background-color: #fef3c7;
+            padding: 12px;
+            border-left: 4px solid #f59e0b;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #92400e;
         }
 
         /* Footer */
@@ -182,23 +341,20 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .construction h1 {
-                font-size: 32px;
+            .hero h1 {
+                font-size: 28px;
             }
 
-            .construction p {
-                font-size: 16px;
+            .chapter-header {
+                flex-direction: column;
+                align-items: flex-start;
             }
 
-            .construction-icon {
-                font-size: 60px;
+            .chapter-toggle {
+                margin-top: 10px;
             }
 
-            .course-preview {
-                padding: 20px;
-            }
-
-            .chapters-grid {
+            .resource-links {
                 grid-template-columns: 1fr;
             }
         }
@@ -209,74 +365,1027 @@
     <header>
         <div class="header-content">
             <div class="logo-section">
-                <a href="https://curious2study.com" class="site-title">Curious2Study</a>
+                <img src="https://curious2study.com/curious2study_small.png" alt="Curious2Study Logo">
+                <div class="header-logo-text">
+                    <a href="https://curious2study.com" class="site-title">Curious2Study</a>
+                </div>
             </div>
             <a href="https://curious2study.com" class="back-link">← Back to Home</a>
         </div>
     </header>
 
-    <!-- Under Construction Section -->
-    <section class="construction">
-        <div class="construction-content">
-            <div class="construction-icon">🏗️</div>
-            <h1>Physics Course</h1>
-            <p>We're building something amazing. This comprehensive physics course will launch soon with video lectures and study guides.</p>
-            <div class="coming-soon">Coming Soon</div>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>College Physics for AP Courses 2e</h1>
+            <p>From kinematics to fluid dynamics. Master the fundamental laws of motion and energy.</p>
+        </div>
+    </section>
 
-            <!-- Course Preview -->
-            <div class="course-preview">
-                <h2>What to Expect</h2>
-                <p style="margin-bottom: 30px; text-align: center; color: #666;">12 comprehensive chapters covering kinematics through fluid dynamics</p>
-                
-                <div class="chapters-grid">
-                    <div class="chapter">
-                        <h3>Chapter 1</h3>
-                        <p>Physics Foundations</p>
+    <!-- Resources Section -->
+    <section class="container resources">
+        <h2>Course Resources</h2>
+        <div class="resource-links">
+            <div class="resource-link">
+                <h3>OpenStax Textbook</h3>
+                <p>Free, peer-reviewed textbook from Rice University.</p>
+                <a href="https://openstax.org/details/books/college-physics-ap-courses-2e" target="_blank">Visit OpenStax →</a>
+            </div>
+
+            <div class="resource-link">
+                <h3>Archived Textbook PDF</h3>
+                <p>Complete PDF used for generating these videos.</p>
+                <a href="physics.curious2study.com/College_Physics_for_AP_Courses_2e-WEB_First_Half.pdf" target="_blank">Download PDF →</a>
+            </div>
+
+            <div class="resource-link">
+                <h3>YouTube Playlist</h3>
+                <p>All video lectures in one convenient playlist.</p>
+                <a href="https://youtube.com/playlist?list=PLRZoOV9_WiAA&si=oa6T_milmJ_BPy3c" target="_blank">View Playlist →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapters Section -->
+    <section class="container chapters">
+        <h2>Chapter Lectures</h2>
+
+        <!-- Chapter 1 -->
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 1: Physics Foundations</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/dbabptHwD3o" target="_blank">
+                            <img src="https://img.youtube.com/vi/dbabptHwD3o/maxresdefault.jpg" alt="Physics: An Introduction">
+                        </a>
                     </div>
-                    <div class="chapter">
-                        <h3>Chapter 2</h3>
-                        <p>1D Kinematics</p>
+                    <div class="section-info">
+                        <div class="section-number">1.1</div>
+                        <div class="section-title">Physics: An Introduction</div>
+                        <div class="section-pages">Pages 10-17</div>
+                        <a href="https://youtu.be/dbabptHwD3o" target="_blank" class="section-link">Watch Video</a>
                     </div>
-                    <div class="chapter">
-                        <h3>Chapter 3</h3>
-                        <p>2D Kinematics</p>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/686yKgmmD-Y" target="_blank">
+                            <img src="https://img.youtube.com/vi/686yKgmmD-Y/maxresdefault.jpg" alt="Physical Quantities and Units">
+                        </a>
                     </div>
-                    <div class="chapter">
-                        <h3>Chapter 4</h3>
-                        <p>Forces & Newton's Laws</p>
+                    <div class="section-info">
+                        <div class="section-number">1.2</div>
+                        <div class="section-title">Physical Quantities and Units</div>
+                        <div class="section-pages">Pages 18-25</div>
+                        <a href="https://youtu.be/686yKgmmD-Y" target="_blank" class="section-link">Watch Video</a>
                     </div>
-                    <div class="chapter">
-                        <h3>Chapter 5</h3>
-                        <p>Friction & Drag</p>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/PfQNVofb45I" target="_blank">
+                            <img src="https://img.youtube.com/vi/PfQNVofb45I/maxresdefault.jpg" alt="Accuracy, Precision, and Significant Figures">
+                        </a>
                     </div>
-                    <div class="chapter">
-                        <h3>Chapter 6</h3>
-                        <p>Circular Motion & Gravity</p>
+                    <div class="section-info">
+                        <div class="section-number">1.3</div>
+                        <div class="section-title">Accuracy, Precision, and Significant Figures</div>
+                        <div class="section-pages">Pages 26-31</div>
+                        <a href="https://youtu.be/PfQNVofb45I" target="_blank" class="section-link">Watch Video</a>
                     </div>
-                    <div class="chapter">
-                        <h3>Chapter 7</h3>
-                        <p>Work & Energy</p>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/3D-YijK0b_U" target="_blank">
+                            <img src="https://img.youtube.com/vi/3D-YijK0b_U/maxresdefault.jpg" alt="Approximation">
+                        </a>
                     </div>
-                    <div class="chapter">
-                        <h3>Chapter 8</h3>
-                        <p>Momentum & Collisions</p>
+                    <div class="section-info">
+                        <div class="section-number">1.4</div>
+                        <div class="section-title">Approximation</div>
+                        <div class="section-pages">Pages 32-34</div>
+                        <a href="https://youtu.be/3D-YijK0b_U" target="_blank" class="section-link">Watch Video</a>
                     </div>
-                    <div class="chapter">
-                        <h3>Chapter 9</h3>
-                        <p>Statics & Torque</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 2: One-Dimensional Kinematics</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/fMgbXpWY6BI" target="_blank">
+                            <img src="https://img.youtube.com/vi/fMgbXpWY6BI/maxresdefault.jpg" alt="Displacement">
+                        </a>
                     </div>
-                    <div class="chapter">
-                        <h3>Chapter 10</h3>
-                        <p>Rotational Motion</p>
+                    <div class="section-info">
+                        <div class="section-number">2.1</div>
+                        <div class="section-title">Displacement</div>
+                        <div class="section-pages">Pages 40-42</div>
+                        <a href="https://youtu.be/fMgbXpWY6BI" target="_blank" class="section-link">Watch Video</a>
                     </div>
-                    <div class="chapter">
-                        <h3>Chapter 11</h3>
-                        <p>Fluid Statics</p>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/hV8qtxLFo10" target="_blank">
+                            <img src="https://img.youtube.com/vi/hV8qtxLFo10/maxresdefault.jpg" alt="Vectors, Scalars, and Coordinate Systems">
+                        </a>
                     </div>
-                    <div class="chapter">
-                        <h3>Chapter 12</h3>
-                        <p>Fluid Dynamics</p>
+                    <div class="section-info">
+                        <div class="section-number">2.2</div>
+                        <div class="section-title">Vectors, Scalars, and Coordinate Systems</div>
+                        <div class="section-pages">Pages 43-43</div>
+                        <a href="https://youtu.be/hV8qtxLFo10" target="_blank" class="section-link">Watch Video</a>
                     </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/Ujbxc_2SOlU" target="_blank">
+                            <img src="https://img.youtube.com/vi/Ujbxc_2SOlU/maxresdefault.jpg" alt="Time, Velocity, and Speed">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">2.3</div>
+                        <div class="section-title">Time, Velocity, and Speed</div>
+                        <div class="section-pages">Pages 44-48</div>
+                        <a href="https://youtu.be/Ujbxc_2SOlU" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/RMrav1S0K8M" target="_blank">
+                            <img src="https://img.youtube.com/vi/RMrav1S0K8M/maxresdefault.jpg" alt="Acceleration">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">2.4</div>
+                        <div class="section-title">Acceleration</div>
+                        <div class="section-pages">Pages 49-59</div>
+                        <a href="https://youtu.be/RMrav1S0K8M" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/rpc5bw2Ix7s" target="_blank">
+                            <img src="https://img.youtube.com/vi/rpc5bw2Ix7s/maxresdefault.jpg" alt="Motion Equations for Constant Acceleration in One Dimension">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">2.5</div>
+                        <div class="section-title">Motion Equations for Constant Acceleration in One Dimension</div>
+                        <div class="section-pages">Pages 60-70</div>
+                        <a href="https://youtu.be/rpc5bw2Ix7s" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/jctgBbrh6iM" target="_blank">
+                            <img src="https://img.youtube.com/vi/jctgBbrh6iM/maxresdefault.jpg" alt="Problem-Solving Basics for One-Dimensional Kinematics">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">2.6</div>
+                        <div class="section-title">Problem-Solving Basics for One-Dimensional Kinematics</div>
+                        <div class="section-pages">Pages 71-72</div>
+                        <a href="https://youtu.be/jctgBbrh6iM" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/qRvpBNMH_4U" target="_blank">
+                            <img src="https://img.youtube.com/vi/qRvpBNMH_4U/maxresdefault.jpg" alt="Falling Objects">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">2.7</div>
+                        <div class="section-title">Falling Objects</div>
+                        <div class="section-pages">Pages 73-81</div>
+                        <a href="https://youtu.be/qRvpBNMH_4U" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/PdItHqZMN7c" target="_blank">
+                            <img src="https://img.youtube.com/vi/PdItHqZMN7c/maxresdefault.jpg" alt="Graphical Analysis of One-Dimensional Motion">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">2.8</div>
+                        <div class="section-title">Graphical Analysis of One-Dimensional Motion</div>
+                        <div class="section-pages">Pages 82-89</div>
+                        <a href="https://youtu.be/PdItHqZMN7c" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 3: Two-Dimensional Kinematics</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/azw0DGUwmRk" target="_blank">
+                            <img src="https://img.youtube.com/vi/azw0DGUwmRk/maxresdefault.jpg" alt="Kinematics in Two Dimensions: An Introduction">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">3.1</div>
+                        <div class="section-title">Kinematics in Two Dimensions: An Introduction</div>
+                        <div class="section-pages">Pages 104-106</div>
+                        <a href="https://youtu.be/azw0DGUwmRk" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/2MFhpaLaiHM" target="_blank">
+                            <img src="https://img.youtube.com/vi/2MFhpaLaiHM/maxresdefault.jpg" alt="Vector Addition and Subtraction: Graphical Methods">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">3.2</div>
+                        <div class="section-title">Vector Addition and Subtraction: Graphical Methods</div>
+                        <div class="section-pages">Pages 107-114</div>
+                        <a href="https://youtu.be/2MFhpaLaiHM" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/qvFVCRhKS10" target="_blank">
+                            <img src="https://img.youtube.com/vi/qvFVCRhKS10/maxresdefault.jpg" alt="Vector Addition and Subtraction: Analytical Methods">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">3.3</div>
+                        <div class="section-title">Vector Addition and Subtraction: Analytical Methods</div>
+                        <div class="section-pages">Pages 115-120</div>
+                        <a href="https://youtu.be/qvFVCRhKS10" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/FkKg-K8RANU" target="_blank">
+                            <img src="https://img.youtube.com/vi/FkKg-K8RANU/maxresdefault.jpg" alt="Projectile Motion">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">3.4</div>
+                        <div class="section-title">Projectile Motion</div>
+                        <div class="section-pages">Pages 121-129</div>
+                        <a href="https://youtu.be/FkKg-K8RANU" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/0BezC4m_FZc" target="_blank">
+                            <img src="https://img.youtube.com/vi/0BezC4m_FZc/maxresdefault.jpg" alt="Addition of Velocities">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">3.5</div>
+                        <div class="section-title">Addition of Velocities</div>
+                        <div class="section-pages">Pages 130-138</div>
+                        <a href="https://youtu.be/0BezC4m_FZc" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 4 -->
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 4: Forces and Newton's Laws</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/YcgLDajrxDQ" target="_blank">
+                            <img src="https://img.youtube.com/vi/YcgLDajrxDQ/maxresdefault.jpg" alt="Development of Force Concept">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.1</div>
+                        <div class="section-title">Development of Force Concept</div>
+                        <div class="section-pages">Pages 158-158</div>
+                        <a href="https://youtu.be/YcgLDajrxDQ" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/gRDs_lf8BMU" target="_blank">
+                            <img src="https://img.youtube.com/vi/gRDs_lf8BMU/maxresdefault.jpg" alt="Newton's First Law of Motion: Inertia">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.2</div>
+                        <div class="section-title">Newton's First Law of Motion: Inertia</div>
+                        <div class="section-pages">Pages 159-164</div>
+                        <a href="https://youtu.be/gRDs_lf8BMU" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/7rd6OTb5AQQ" target="_blank">
+                            <img src="https://img.youtube.com/vi/7rd6OTb5AQQ/maxresdefault.jpg" alt="Newton's Second Law of Motion: Concept of a System">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.3</div>
+                        <div class="section-title">Newton's Second Law of Motion: Concept of a System</div>
+                        <div class="section-pages">Pages 165-168</div>
+                        <a href="https://youtu.be/7rd6OTb5AQQ" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/QPmC3gYR50I" target="_blank">
+                            <img src="https://img.youtube.com/vi/QPmC3gYR50I/maxresdefault.jpg" alt="Newton's Third Law of Motion: Symmetry in Forces">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.4</div>
+                        <div class="section-title">Newton's Third Law of Motion: Symmetry in Forces</div>
+                        <div class="section-pages">Pages 169-177</div>
+                        <a href="https://youtu.be/QPmC3gYR50I" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/THhIlozIoOc" target="_blank">
+                            <img src="https://img.youtube.com/vi/THhIlozIoOc/maxresdefault.jpg" alt="Normal, Tension, and Other Examples of Forces">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.5</div>
+                        <div class="section-title">Normal, Tension, and Other Examples of Forces</div>
+                        <div class="section-pages">Pages 178-179</div>
+                        <a href="https://youtu.be/THhIlozIoOc" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/JaBmZYxJlY4" target="_blank">
+                            <img src="https://img.youtube.com/vi/JaBmZYxJlY4/maxresdefault.jpg" alt="Problem-Solving Strategies">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.6</div>
+                        <div class="section-title">Problem-Solving Strategies</div>
+                        <div class="section-pages">Pages 180-186</div>
+                        <a href="https://youtu.be/JaBmZYxJlY4" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/-ZdTLaqvqTI" target="_blank">
+                            <img src="https://img.youtube.com/vi/-ZdTLaqvqTI/maxresdefault.jpg" alt="Further Applications of Newton's Laws of Motion">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.7</div>
+                        <div class="section-title">Further Applications of Newton's Laws of Motion</div>
+                        <div class="section-pages">Pages 187-192</div>
+                        <a href="https://youtu.be/-ZdTLaqvqTI" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/APaZZ_IqMsc" target="_blank">
+                            <img src="https://img.youtube.com/vi/APaZZ_IqMsc/maxresdefault.jpg" alt="Extended Topic: The Four Basic Forces-An Introduction">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.8</div>
+                        <div class="section-title">Extended Topic: The Four Basic Forces-An Introduction</div>
+                        <div class="section-pages">Pages 180-192</div>
+                        <a href="https://youtu.be/APaZZ_IqMsc" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 5 -->
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 5: Friction and Drag Forces</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/8_jfnXyLLvo" target="_blank">
+                            <img src="https://img.youtube.com/vi/8_jfnXyLLvo/maxresdefault.jpg" alt="Friction">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">5.1</div>
+                        <div class="section-title">Friction</div>
+                        <div class="section-pages">Pages 208-214</div>
+                        <a href="https://youtu.be/8_jfnXyLLvo" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/dY5yL9slquI" target="_blank">
+                            <img src="https://img.youtube.com/vi/dY5yL9slquI/maxresdefault.jpg" alt="Drag Forces">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">5.2</div>
+                        <div class="section-title">Drag Forces</div>
+                        <div class="section-pages">Pages 215-219</div>
+                        <a href="https://youtu.be/dY5yL9slquI" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/JfhFh4xYVlg" target="_blank">
+                            <img src="https://img.youtube.com/vi/JfhFh4xYVlg/maxresdefault.jpg" alt="Elasticity: Stress and Strain">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">5.3</div>
+                        <div class="section-title">Elasticity: Stress and Strain</div>
+                        <div class="section-pages">Pages 220-230</div>
+                        <a href="https://youtu.be/JfhFh4xYVlg" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 6 -->
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 6: Circular Motion and Gravitation</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/4wTNj_3AL_c" target="_blank">
+                            <img src="https://img.youtube.com/vi/4wTNj_3AL_c/maxresdefault.jpg" alt="Rotation Angle and Angular Velocity">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">6.1</div>
+                        <div class="section-title">Rotation Angle and Angular Velocity</div>
+                        <div class="section-pages">Pages 241-244</div>
+                        <a href="https://youtu.be/4wTNj_3AL_c" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/nu_7HFGWVMU" target="_blank">
+                            <img src="https://img.youtube.com/vi/nu_7HFGWVMU/maxresdefault.jpg" alt="Centripetal Acceleration">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">6.2</div>
+                        <div class="section-title">Centripetal Acceleration</div>
+                        <div class="section-pages">Pages 245-248</div>
+                        <a href="https://youtu.be/nu_7HFGWVMU" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/8nPY4HpxlnE" target="_blank">
+                            <img src="https://img.youtube.com/vi/8nPY4HpxlnE/maxresdefault.jpg" alt="Centripetal Force">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">6.3</div>
+                        <div class="section-title">Centripetal Force</div>
+                        <div class="section-pages">Pages 249-253</div>
+                        <a href="https://youtu.be/8nPY4HpxlnE" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/pSl8WPKD9oc" target="_blank">
+                            <img src="https://img.youtube.com/vi/pSl8WPKD9oc/maxresdefault.jpg" alt="Fictitious Forces and Non-inertial Frames: The Coriolis Force">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">6.4</div>
+                        <div class="section-title">Fictitious Forces and Non-inertial Frames: The Coriolis Force</div>
+                        <div class="section-pages">Pages 254-256</div>
+                        <a href="https://youtu.be/pSl8WPKD9oc" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/QTPg9m46Z0E" target="_blank">
+                            <img src="https://img.youtube.com/vi/QTPg9m46Z0E/maxresdefault.jpg" alt="Newton's Universal Law of Gravitation">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">6.5</div>
+                        <div class="section-title">Newton's Universal Law of Gravitation</div>
+                        <div class="section-pages">Pages 257-264</div>
+                        <a href="https://youtu.be/QTPg9m46Z0E" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/EUdyQlBKPik" target="_blank">
+                            <img src="https://img.youtube.com/vi/EUdyQlBKPik/maxresdefault.jpg" alt="Satellites and Kepler's Laws: An Argument for Simplicity">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">6.6</div>
+                        <div class="section-title">Satellites and Kepler's Laws: An Argument for Simplicity</div>
+                        <div class="section-pages">Pages 265-270</div>
+                        <a href="https://youtu.be/EUdyQlBKPik" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 7 -->
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 7: Work and Energy</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/CbFgmE8KRGU" target="_blank">
+                            <img src="https://img.youtube.com/vi/CbFgmE8KRGU/maxresdefault.jpg" alt="Work: The Scientific Definition">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">7.1</div>
+                        <div class="section-title">Work: The Scientific Definition</div>
+                        <div class="section-pages">Pages 283-285</div>
+                        <a href="https://youtu.be/CbFgmE8KRGU" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/DNFqJ12nS0Q" target="_blank">
+                            <img src="https://img.youtube.com/vi/DNFqJ12nS0Q/maxresdefault.jpg" alt="Kinetic Energy and the Work-Energy Theorem">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">7.2</div>
+                        <div class="section-title">Kinetic Energy and the Work-Energy Theorem</div>
+                        <div class="section-pages">Pages 286-290</div>
+                        <a href="https://youtu.be/DNFqJ12nS0Q" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/wi6ZlwwkzxI" target="_blank">
+                            <img src="https://img.youtube.com/vi/wi6ZlwwkzxI/maxresdefault.jpg" alt="Gravitational Potential Energy">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">7.3</div>
+                        <div class="section-title">Gravitational Potential Energy</div>
+                        <div class="section-pages">Pages 291-296</div>
+                        <a href="https://youtu.be/wi6ZlwwkzxI" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/2rd7cUdhkXQ" target="_blank">
+                            <img src="https://img.youtube.com/vi/2rd7cUdhkXQ/maxresdefault.jpg" alt="Conservative Forces and Potential Energy">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">7.4</div>
+                        <div class="section-title">Conservative Forces and Potential Energy</div>
+                        <div class="section-pages">Pages 297-300</div>
+                        <a href="https://youtu.be/2rd7cUdhkXQ" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/kAli1ToRnBM" target="_blank">
+                            <img src="https://img.youtube.com/vi/kAli1ToRnBM/maxresdefault.jpg" alt="Nonconservative Forces">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">7.5</div>
+                        <div class="section-title">Nonconservative Forces</div>
+                        <div class="section-pages">Pages 301-305</div>
+                        <a href="https://youtu.be/kAli1ToRnBM" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/IQ--Trj5C30" target="_blank">
+                            <img src="https://img.youtube.com/vi/IQ--Trj5C30/maxresdefault.jpg" alt="Conservation of Energy">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">7.6</div>
+                        <div class="section-title">Conservation of Energy</div>
+                        <div class="section-pages">Pages 306-309</div>
+                        <a href="https://youtu.be/IQ--Trj5C30" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/ANnpwuOvi4Y" target="_blank">
+                            <img src="https://img.youtube.com/vi/ANnpwuOvi4Y/maxresdefault.jpg" alt="Power">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">7.7</div>
+                        <div class="section-title">Power</div>
+                        <div class="section-pages">Pages 310-314</div>
+                        <a href="https://youtu.be/ANnpwuOvi4Y" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/hlwtbFr2krs" target="_blank">
+                            <img src="https://img.youtube.com/vi/hlwtbFr2krs/maxresdefault.jpg" alt="Work, Energy, and Power in Humans">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">7.8</div>
+                        <div class="section-title">Work, Energy, and Power in Humans</div>
+                        <div class="section-pages">Pages 315-318</div>
+                        <a href="https://youtu.be/hlwtbFr2krs" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/L4TGEsFXSTY" target="_blank">
+                            <img src="https://img.youtube.com/vi/L4TGEsFXSTY/maxresdefault.jpg" alt="World Energy Use">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">7.9</div>
+                        <div class="section-title">World Energy Use</div>
+                        <div class="section-pages">Pages 319-322</div>
+                        <a href="https://youtu.be/L4TGEsFXSTY" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 8 -->
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 8: Linear Momentum and Collisions</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/c4XXEk2OIlQ" target="_blank">
+                            <img src="https://img.youtube.com/vi/c4XXEk2OIlQ/maxresdefault.jpg" alt="Linear Momentum and Force">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">8.1</div>
+                        <div class="section-title">Linear Momentum and Force</div>
+                        <div class="section-pages">Pages 340-342</div>
+                        <a href="https://youtu.be/c4XXEk2OIlQ" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/WthWMmabKeY" target="_blank">
+                            <img src="https://img.youtube.com/vi/WthWMmabKeY/maxresdefault.jpg" alt="Impulse">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">8.2</div>
+                        <div class="section-title">Impulse</div>
+                        <div class="section-pages">Pages 343-345</div>
+                        <a href="https://youtu.be/WthWMmabKeY" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">8.3</div>
+                    <div class="section-title">Conservation of Momentum</div>
+                    <div class="section-pages">Pages 346-349</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/V9bPZKCJ1xU" target="_blank">
+                            <img src="https://img.youtube.com/vi/V9bPZKCJ1xU/maxresdefault.jpg" alt="Elastic Collisions in One Dimension">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">8.4</div>
+                        <div class="section-title">Elastic Collisions in One Dimension</div>
+                        <div class="section-pages">Pages 350-351</div>
+                        <a href="https://youtu.be/V9bPZKCJ1xU" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">8.5</div>
+                    <div class="section-title">Inelastic Collisions in One Dimension</div>
+                    <div class="section-pages">Pages 352-356</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">8.6</div>
+                    <div class="section-title">Collisions of Point Masses in Two Dimensions</div>
+                    <div class="section-pages">Pages 357-360</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">8.7</div>
+                    <div class="section-title">Introduction to Rocket Propulsion</div>
+                    <div class="section-pages">Pages 361-364</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 9 -->
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 9: Statics and Torque</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-number">9.1</div>
+                    <div class="section-title">The First Condition for Equilibrium</div>
+                    <div class="section-pages">Pages 382-383</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">9.2</div>
+                    <div class="section-title">The Second Condition for Equilibrium</div>
+                    <div class="section-pages">Pages 384-387</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">9.3</div>
+                    <div class="section-title">Stability</div>
+                    <div class="section-pages">Pages 388-392</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">9.4</div>
+                    <div class="section-title">Applications of Statics, Including Problem-Solving Strategies</div>
+                    <div class="section-pages">Pages 393-395</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">9.5</div>
+                    <div class="section-title">Simple Machines</div>
+                    <div class="section-pages">Pages 396-399</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">9.6</div>
+                    <div class="section-title">Forces and Torques in Muscles and Joints</div>
+                    <div class="section-pages">Pages 400-406</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 10 -->
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 10: Rotational Motion and Angular Momentum</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-number">10.1</div>
+                    <div class="section-title">Angular Acceleration</div>
+                    <div class="section-pages">Pages 419-423</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">10.2</div>
+                    <div class="section-title">Kinematics of Rotational Motion</div>
+                    <div class="section-pages">Pages 424-428</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">10.3</div>
+                    <div class="section-title">Dynamics of Rotational Motion: Rotational Inertia</div>
+                    <div class="section-pages">Pages 429-433</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">10.4</div>
+                    <div class="section-title">Rotational Kinetic Energy: Work and Energy Revisited</div>
+                    <div class="section-pages">Pages 434-441</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">10.5</div>
+                    <div class="section-title">Angular Momentum and Its Conservation</div>
+                    <div class="section-pages">Pages 442-447</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">10.6</div>
+                    <div class="section-title">Collisions of Extended Bodies in Two Dimensions</div>
+                    <div class="section-pages">Pages 448-452</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">10.7</div>
+                    <div class="section-title">Gyroscopic Effects: Vector Aspects of Angular Momentum</div>
+                    <div class="section-pages">Pages 453-455</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 11 -->
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 11: Fluid Statics</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="combined-note">
+                    Note: Sections 11.1 and 11.2 are combined in a single video covering both What Is a Fluid and Density.
+                </div>
+
+                <div class="section">
+                    <div class="section-number">11.1-11.2</div>
+                    <div class="section-title">What Is a Fluid? / Density (Combined)</div>
+                    <div class="section-pages">Pages 470-473</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">11.3</div>
+                    <div class="section-title">Pressure</div>
+                    <div class="section-pages">Pages 474-476</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">11.4</div>
+                    <div class="section-title">Variation of Pressure with Depth in a Fluid</div>
+                    <div class="section-pages">Pages 477-480</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">11.5</div>
+                    <div class="section-title">Pascal's Principle</div>
+                    <div class="section-pages">Pages 481-483</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">11.6</div>
+                    <div class="section-title">Gauge Pressure, Absolute Pressure, and Pressure Measurement</div>
+                    <div class="section-pages">Pages 484-487</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">11.7</div>
+                    <div class="section-title">Archimedes' Principle</div>
+                    <div class="section-pages">Pages 488-494</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">11.8</div>
+                    <div class="section-title">Cohesion and Adhesion in Liquids: Surface Tension and Capillary Action</div>
+                    <div class="section-pages">Pages 495-503</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">11.9</div>
+                    <div class="section-title">Pressures in the Body</div>
+                    <div class="section-pages">Pages 504-509</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 12 -->
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 12: Fluid Dynamics</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-number">12.1</div>
+                    <div class="section-title">Flow Rate and Its Relation to Velocity</div>
+                    <div class="section-pages">Pages 522-524</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">12.2</div>
+                    <div class="section-title">Bernoulli's Equation</div>
+                    <div class="section-pages">Pages 525-529</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">12.3</div>
+                    <div class="section-title">The Most General Applications of Bernoulli's Equation</div>
+                    <div class="section-pages">Pages 530-532</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">12.4</div>
+                    <div class="section-title">Viscosity and Laminar Flow; Poiseuille's Law</div>
+                    <div class="section-pages">Pages 533-540</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">12.5</div>
+                    <div class="section-title">The Onset of Turbulence</div>
+                    <div class="section-pages">Pages 541-542</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">12.6</div>
+                    <div class="section-title">Motion of an Object in a Viscous Fluid</div>
+                    <div class="section-pages">Pages 543-544</div>
+                    <span class="no-video">Video Coming Soon</span>
+                </div>
+
+                <div class="section">
+                    <div class="section-number">12.7</div>
+                    <div class="section-title">Molecular Transport Phenomena: Diffusion, Osmosis, and Related Processes</div>
+                    <div class="section-pages">Pages 545-549</div>
+                    <span class="no-video">Video Coming Soon</span>
                 </div>
             </div>
         </div>
@@ -293,5 +1402,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleChapter(headerElement) {
+            const content = headerElement.nextElementSibling;
+            const toggle = headerElement.querySelector('.chapter-toggle');
+            
+            content.classList.toggle('active');
+            toggle.textContent = content.classList.contains('active') ? '−' : '+';
+        }
+    </script>
 </body>
 </html>
