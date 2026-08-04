@@ -301,6 +301,23 @@
             padding: 40px 20px 0;
         }
 
+        .link-box {
+            display: block;
+            text-decoration: none;
+        }
+
+        .link-box .chapter-header {
+            border-bottom: none;
+        }
+
+        .link-box:hover .chapter-header {
+            background-color: #e0f2fe;
+        }
+
+        .link-box .chapter-toggle {
+            font-size: 22px;
+        }
+
         .about-content p {
             font-size: 15px;
             color: #333;
@@ -445,32 +462,43 @@
         </div>
     </section>
 
-    <!-- Resources Section -->
-    <section class="container resources">
-        <h2>Course Resources</h2>
-        <div class="resource-links">
-            <div class="resource-link">
-                <h3>OpenStax Textbook</h3>
-                <p>Free, peer-reviewed textbook from Rice University.</p>
-                <a href="https://openstax.org/details/books/college-physics-ap-courses-2e" target="_blank">Visit OpenStax →</a>
-            </div>
-
-            <div class="resource-link">
-                <h3>Archived Textbook PDF</h3>
-                <p>Complete PDF used for generating these videos.</p>
-                <a href="https://raw.githubusercontent.com/Curious2Study/curious2study-physics/main/College_Physics_for_AP_Courses_2e-WEB_First_Half.pdf" target="_blank">Download PDF →</a>
-            </div>
-
-            <div class="resource-link">
-                <h3>YouTube Playlist</h3>
-                <p>All video lectures in one convenient playlist.</p>
-                <a href="https://youtube.com/playlist?list=PLKFCuwEE3ftY&si=iTddmnRyz0EBPrZV" target="_blank">View Playlist →</a>
-            </div>
-
-            <div class="resource-link">
+    <!-- How to Study Physics Link -->
+    <section class="container about-section">
+        <a class="chapter link-box" href="study-tips.html">
+            <div class="chapter-header">
                 <h3>How to Study Physics</h3>
-                <p>Practical tips for solving problems and building good habits.</p>
-                <a href="study-tips.html">Read Study Tips →</a>
+                <span class="chapter-toggle">→</span>
+            </div>
+        </a>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="container about-section">
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Course Resources: Textbook and Playlist</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="resource-links">
+                    <div class="resource-link">
+                        <h3>OpenStax Textbook</h3>
+                        <p>Free, peer-reviewed textbook from Rice University.</p>
+                        <a href="https://openstax.org/details/books/college-physics-ap-courses-2e" target="_blank">Visit OpenStax →</a>
+                    </div>
+
+                    <div class="resource-link">
+                        <h3>Archived Textbook PDF</h3>
+                        <p>Complete PDF used for generating these videos.</p>
+                        <a href="https://raw.githubusercontent.com/Curious2Study/curious2study-physics/main/College_Physics_for_AP_Courses_2e-WEB_First_Half.pdf" target="_blank">Download PDF →</a>
+                    </div>
+
+                    <div class="resource-link">
+                        <h3>YouTube Playlist</h3>
+                        <p>All video lectures in one convenient playlist.</p>
+                        <a href="https://youtube.com/playlist?list=PLKFCuwEE3ftY&si=iTddmnRyz0EBPrZV" target="_blank">View Playlist →</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
