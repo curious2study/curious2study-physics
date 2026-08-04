@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Study Physics - Curious2Study</title>
+    <link rel="icon" type="image/png" href="https://curious2study.com/curious2study_small.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: #333;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #f8fafc;
+            padding: 20px 0;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-section img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .header-logo-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .site-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #1e3a8a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #60a5fa;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        /* Back to physics link, under hero */
+        .breadcrumb {
+            max-width: 900px;
+            margin: 20px auto 0;
+            padding: 0 20px;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .breadcrumb a:hover {
+            color: #1e3a8a;
+        }
+
+        /* Article body */
+        .article {
+            padding: 30px 20px 60px;
+        }
+
+        .article h2 {
+            color: #1e3a8a;
+            font-size: 24px;
+            margin: 32px 0 14px;
+        }
+
+        .article h2:first-child {
+            margin-top: 0;
+        }
+
+        .article p {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        .article strong {
+            color: #1e3a8a;
+        }
+
+        .tips-list {
+            list-style: none;
+            counter-reset: tip-counter;
+        }
+
+        .tips-list li {
+            counter-increment: tip-counter;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 18px 20px 18px 60px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .tips-list li::before {
+            content: counter(tip-counter);
+            position: absolute;
+            left: 18px;
+            top: 18px;
+            width: 28px;
+            height: 28px;
+            background-color: #3b82f6;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .tips-list li h3 {
+            color: #1e3a8a;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+
+        .tips-list li p {
+            font-size: 15px;
+            margin-bottom: 0;
+            color: #333;
+        }
+
+        .back-to-top {
+            text-align: center;
+            padding: 20px 20px 0;
+        }
+
+        .back-to-top a {
+            display: inline-block;
+            padding: 10px 24px;
+            background-color: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        .back-to-top a:hover {
+            background-color: #1e3a8a;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: #60a5fa;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .tips-list li {
+                padding: 16px 16px 16px 54px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="https://curious2study.com/curious2study_small.png" alt="Curious2Study Logo">
+                <div class="header-logo-text">
+                    <a href="https://curious2study.com" class="site-title">Curious2Study</a>
+                </div>
+            </div>
+            <a href="https://curious2study.com" class="back-link">← Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>How to Study Physics</h1>
+            <p>Practical habits for solving problems and making them stick.</p>
+        </div>
+    </section>
+
+    <div class="breadcrumb">
+        <a href="index.html">← Back to College Physics for AP Courses 2e</a>
+    </div>
+
+    <!-- Article -->
+    <section class="container article">
+        <h2>How Do You Study Physics?</h2>
+        <p><strong>The more mistakes you make, the better you will get.</strong> When you take physics, you are expected to make mistakes, in fact many of them. It is part of the learning process. You need to solve a large number of questions, and you need to make mistakes while solving them. With enough practice, you will stop making those same mistakes on exams or when applying physics to real problems.</p>
+        <p>Getting the correct final answer is important, but it matters less than getting the process right. Writing down each step clearly is essential, both for your own understanding and for partial credit.</p>
+        <p>The general process for studying physics is: (1) read the textbook, (2) watch lectures, and (3) solve a large number of problems, sometimes going back to earlier chapters when a new topic depends on one you covered before. Most of your time should go toward step three.</p>
+
+        <h2>Study Tips</h2>
+        <p>Ordered roughly from most to least important:</p>
+        <ol class="tips-list">
+            <li>
+                <h3>Spread your practice out instead of studying for a single exam</h3>
+                <p>It's tempting to cram the day or two before a test, but that approach tends to fail in physics. Progress comes from consistent, spaced practice. Try solving a few questions every day, budgeting about 20 minutes per question. At one hour a day, that's three questions daily.</p>
+            </li>
+            <li>
+                <h3>Write your steps down cleanly and completely</h3>
+                <p>Shortcuts in your work now become confusion later. Getting the correct final answer matters less than getting the process right, so treat every written step as part of the answer, not just scratch work.</p>
+            </li>
+            <li>
+                <h3>Read the introduction of each chapter instead of skipping to the problems</h3>
+                <p>It sets the scene for the whole section. Many students can solve problems when they already know which section a question came from, but get lost when a test mixes questions from several sections. That happens because they never learned to identify which law, concept, or equation applies without being told.</p>
+            </li>
+            <li>
+                <h3>Find the recurring patterns in each section</h3>
+                <p>Each part of physics has a small number of problem-solving patterns that repeat. Once you recognize them, most problems in that section become manageable, as long as you can identify which pattern applies. That identification skill comes from understanding the big picture, not just the formulas.</p>
+            </li>
+            <li>
+                <h3>Build a list of physics-specific vocabulary as you go</h3>
+                <p>Physics uses everyday words with specific, reserved meanings, and instructors often assume those meanings are obvious. For example, "dropped" means the object starts at rest, with an initial velocity of zero, as opposed to being thrown or launched. "Suddenly," in a collision or impact, usually signals that the event happens over such a short time that outside forces like gravity or friction can be ignored, which is often your cue to apply conservation of momentum.</p>
+            </li>
+            <li>
+                <h3>Ask why each question was included, not just what the answer is</h3>
+                <p>Good textbooks include questions with a purpose. For example, some questions exist because students commonly make mistakes converting units, while others are there to teach the steps for solving a particular type of problem. These are just two examples: as you work through a chapter, try to notice the purpose behind other questions too.</p>
+            </li>
+            <li>
+                <h3>Record why you made each mistake, right when you notice it</h3>
+                <p>This becomes a personal checklist you can use to check your work later.</p>
+            </li>
+            <li>
+                <h3>Get help instead of spending too much time on any single question</h3>
+                <p>Since you need to solve many problems, don't lose an hour on one question when you're stuck. If you solve two questions a day, seven days a week, for a 15-week semester, that adds up to 210 questions, roughly the minimum needed to pass a typical course (the exact number depends on the school's rigor and your own starting point).</p>
+            </li>
+            <li>
+                <h3>Use AI as a tutor, not an answer key</h3>
+                <p>Getting the correct answer is not the goal, understanding the process is. In the past, students learned from worked examples in textbooks. Now, you can generate worked examples with AI and use them the same way. As of mid-2026, both ChatGPT and Claude handle physics problems reasonably well, with Claude making fewer errors in informal testing. Textbooks themselves are not error-free either (answer keys sometimes fall out of date after questions are revised), so occasional AI mistakes are a similar, manageable risk as long as you are checking the reasoning, not just the final number.</p>
+            </li>
+        </ol>
+
+        <div class="back-to-top">
+            <a href="index.html">← Back to College Physics for AP Courses 2e</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Curious2Study - Learn How to Learn</p>
+            <p>Licensed under Creative Commons Attribution 4.0 International License (CC BY 4.0)</p>
+            <div class="footer-links">
+                <a href="https://curious2study.com">Home</a>
+                <a href="https://github.com/Curious2Study">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
