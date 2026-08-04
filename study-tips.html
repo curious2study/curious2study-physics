@@ -141,7 +141,7 @@
             counter-reset: tip-counter;
         }
 
-        .tips-list li {
+        .tips-list > li {
             counter-increment: tip-counter;
             background: white;
             border: 2px solid #e2e8f0;
@@ -151,7 +151,7 @@
             position: relative;
         }
 
-        .tips-list li::before {
+        .tips-list > li::before {
             content: counter(tip-counter);
             position: absolute;
             left: 18px;
@@ -168,13 +168,13 @@
             font-size: 14px;
         }
 
-        .tips-list li h3 {
+        .tips-list > li h3 {
             color: #1e3a8a;
             font-size: 17px;
             margin-bottom: 6px;
         }
 
-        .tips-list li p {
+        .tips-list > li > p {
             font-size: 15px;
             margin-bottom: 0;
             color: #333;
@@ -347,7 +347,7 @@
             <li>
                 <h3>Use AI as a tutor, not an answer key</h3>
                 <p>Getting the correct answer is not the goal, understanding the process is. In the past, students learned from worked examples in textbooks. Now, you can generate worked examples with AI and use them the same way. As of mid-2026, both ChatGPT and Claude handle physics problems reasonably well, with Claude making fewer errors in informal testing. Textbooks themselves are not error-free either (answer keys sometimes fall out of date after questions are revised), so occasional AI mistakes are a similar, manageable risk as long as you are checking the reasoning, not just the final number.</p>
-                <p>Here's an example. Take a photo or screenshot of a problem you're working on, and paste the prompt below into the chat along with it. The instructions keep the AI from handing you the answer right away and instead walk you through the problem like a tutor would, one step at a time, at your own pace.</p>
+                <p style="margin-top: 20px;"><strong>Here's an example.</strong> Take a photo or screenshot of a problem you're working on, and paste the prompt below into the chat along with it. The instructions keep the AI from handing you the answer right away and instead walk you through the problem like a tutor would, one step at a time, at your own pace.</p>
                 <div class="prompt-box">
                     <div class="prompt-label">Example Prompt</div>
                     <p class="prompt-intro">You are my physics tutor. I'm attaching a photo of a problem I'm working on. Please don't give me the final answer or a full worked solution right away. Instead, walk me through it like a tutor would:</p>
@@ -357,10 +357,9 @@
                         <li>Ask me what concept, law, or equation I think applies, before you tell me. If I'm wrong, ask a guiding question instead of correcting me directly.</li>
                         <li>Then walk through the solution one step at a time. After each step, stop and wait for me to say "next" (or ask a question about that step) before moving on. Let me set the pace.</li>
                         <li>Only give the complete worked solution if I explicitly ask for it.</li>
-                        <li>When we finish, tell me the section this problem is from, then have me find and solve one more problem from that same section in the textbook, fully on my own. If I don't have the textbook handy, generate a similar problem instead, but first solve it yourself and show me the numbers work out cleanly before I try it.</li>
                     </ol>
                 </div>
-                <p>Step 6 is worth using deliberately. A textbook problem from the same section is a stronger check than an AI-generated one, since it's already correct and won't drift in difficulty. Only let the AI write a new problem when the textbook isn't handy, and even then, make it verify its own numbers first.</p>
+                <p>Work on another similar problem from the same section on your own, and then check the answer with AI.</p>
             </li>
         </ol>
 
