@@ -161,8 +161,14 @@
 
         .chapters h2 {
             color: #1e3a8a;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             font-size: 28px;
+        }
+
+        .chapters-intro {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 25px;
         }
 
         .chapter {
@@ -192,6 +198,26 @@
             color: #1e3a8a;
             font-size: 20px;
             margin: 0;
+        }
+
+        .chapter-title-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .lecture-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1e3a8a;
+            background-color: #dbeafe;
+            padding: 4px 12px;
+            border-radius: 12px;
+            white-space: nowrap;
         }
 
         .chapter-toggle {
@@ -506,11 +532,15 @@
     <!-- Chapters Section -->
     <section class="container chapters">
         <h2>Chapter Lectures</h2>
+        <p class="chapters-intro">Click a chapter to open its video list, then click any lecture to watch it on YouTube.</p>
 
         <!-- Chapter 1 -->
         <div class="chapter">
             <div class="chapter-header" onclick="toggleChapter(this)">
-                <h3>Chapter 1: Physics Foundations</h3>
+                <div class="chapter-title-group">
+                    <h3>Chapter 1: Physics Foundations</h3>
+                    <span class="lecture-badge">▶ 4 video lectures</span>
+                </div>
                 <span class="chapter-toggle">+</span>
             </div>
             <div class="chapter-content">
@@ -575,7 +605,10 @@
         <!-- Chapter 2 -->
         <div class="chapter">
             <div class="chapter-header" onclick="toggleChapter(this)">
-                <h3>Chapter 2: One-Dimensional Kinematics</h3>
+                <div class="chapter-title-group">
+                    <h3>Chapter 2: One-Dimensional Kinematics</h3>
+                    <span class="lecture-badge">▶ 8 video lectures</span>
+                </div>
                 <span class="chapter-toggle">+</span>
             </div>
             <div class="chapter-content">
@@ -696,7 +729,10 @@
         <!-- Chapter 3 -->
         <div class="chapter">
             <div class="chapter-header" onclick="toggleChapter(this)">
-                <h3>Chapter 3: Two-Dimensional Kinematics</h3>
+                <div class="chapter-title-group">
+                    <h3>Chapter 3: Two-Dimensional Kinematics</h3>
+                    <span class="lecture-badge">▶ 5 video lectures</span>
+                </div>
                 <span class="chapter-toggle">+</span>
             </div>
             <div class="chapter-content">
@@ -775,7 +811,10 @@
         <!-- Chapter 4 -->
         <div class="chapter">
             <div class="chapter-header" onclick="toggleChapter(this)">
-                <h3>Chapter 4: Forces and Newton's Laws</h3>
+                <div class="chapter-title-group">
+                    <h3>Chapter 4: Forces and Newton's Laws</h3>
+                    <span class="lecture-badge">▶ 8 video lectures</span>
+                </div>
                 <span class="chapter-toggle">+</span>
             </div>
             <div class="chapter-content">
@@ -896,7 +935,10 @@
         <!-- Chapter 5 -->
         <div class="chapter">
             <div class="chapter-header" onclick="toggleChapter(this)">
-                <h3>Chapter 5: Friction and Drag Forces</h3>
+                <div class="chapter-title-group">
+                    <h3>Chapter 5: Friction and Drag Forces</h3>
+                    <span class="lecture-badge">▶ 3 video lectures</span>
+                </div>
                 <span class="chapter-toggle">+</span>
             </div>
             <div class="chapter-content">
@@ -947,7 +989,10 @@
         <!-- Chapter 6 -->
         <div class="chapter">
             <div class="chapter-header" onclick="toggleChapter(this)">
-                <h3>Chapter 6: Circular Motion and Gravitation</h3>
+                <div class="chapter-title-group">
+                    <h3>Chapter 6: Circular Motion and Gravitation</h3>
+                    <span class="lecture-badge">▶ 6 video lectures</span>
+                </div>
                 <span class="chapter-toggle">+</span>
             </div>
             <div class="chapter-content">
@@ -1040,7 +1085,10 @@
         <!-- Chapter 7 -->
         <div class="chapter">
             <div class="chapter-header" onclick="toggleChapter(this)">
-                <h3>Chapter 7: Work and Energy</h3>
+                <div class="chapter-title-group">
+                    <h3>Chapter 7: Work and Energy</h3>
+                    <span class="lecture-badge">▶ 9 video lectures</span>
+                </div>
                 <span class="chapter-toggle">+</span>
             </div>
             <div class="chapter-content">
@@ -1175,7 +1223,10 @@
         <!-- Chapter 8 -->
         <div class="chapter">
             <div class="chapter-header" onclick="toggleChapter(this)">
-                <h3>Chapter 8: Linear Momentum and Collisions</h3>
+                <div class="chapter-title-group">
+                    <h3>Chapter 8: Linear Momentum and Collisions</h3>
+                    <span class="lecture-badge">▶ 7 video lectures</span>
+                </div>
                 <span class="chapter-toggle">+</span>
             </div>
             <div class="chapter-content">
@@ -1282,7 +1333,10 @@
         <!-- Chapter 9 -->
         <div class="chapter">
             <div class="chapter-header" onclick="toggleChapter(this)">
-                <h3>Chapter 9: Statics and Torque</h3>
+                <div class="chapter-title-group">
+                    <h3>Chapter 9: Statics and Torque</h3>
+                    <span class="lecture-badge">▶ 6 video lectures</span>
+                </div>
                 <span class="chapter-toggle">+</span>
             </div>
             <div class="chapter-content">
@@ -1375,7 +1429,10 @@
         <!-- Chapter 10 -->
         <div class="chapter">
             <div class="chapter-header" onclick="toggleChapter(this)">
-                <h3>Chapter 10: Rotational Motion and Angular Momentum</h3>
+                <div class="chapter-title-group">
+                    <h3>Chapter 10: Rotational Motion and Angular Momentum</h3>
+                    <span class="lecture-badge">▶ 7 video lectures</span>
+                </div>
                 <span class="chapter-toggle">+</span>
             </div>
             <div class="chapter-content">
@@ -1486,7 +1543,10 @@
         <!-- Chapter 11 -->
         <div class="chapter">
             <div class="chapter-header" onclick="toggleChapter(this)">
-                <h3>Chapter 11: Fluid Statics</h3>
+                <div class="chapter-title-group">
+                    <h3>Chapter 11: Fluid Statics</h3>
+                    <span class="lecture-badge">▶ 8 video lectures</span>
+                </div>
                 <span class="chapter-toggle">+</span>
             </div>
             <div class="chapter-content">
@@ -1611,7 +1671,10 @@
         <!-- Chapter 12 -->
         <div class="chapter">
             <div class="chapter-header" onclick="toggleChapter(this)">
-                <h3>Chapter 12: Fluid Dynamics</h3>
+                <div class="chapter-title-group">
+                    <h3>Chapter 12: Fluid Dynamics</h3>
+                    <span class="lecture-badge">▶ 7 video lectures</span>
+                </div>
                 <span class="chapter-toggle">+</span>
             </div>
             <div class="chapter-content">
