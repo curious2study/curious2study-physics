@@ -297,6 +297,42 @@
             flex: 1;
         }
 
+        .about-section {
+            padding: 40px 20px 0;
+        }
+
+        .about-content p {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 14px;
+        }
+
+        .about-content h4 {
+            color: #1e3a8a;
+            font-size: 16px;
+            margin: 18px 0 8px;
+        }
+
+        .about-content ul {
+            margin: 0 0 14px 20px;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .about-content li {
+            margin-bottom: 6px;
+        }
+
+        .about-note {
+            background-color: #eff6ff;
+            padding: 12px;
+            border-left: 4px solid #3b82f6;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #1e3a8a;
+            margin-top: 10px;
+        }
+
         .combined-note {
             background-color: #fef3c7;
             padding: 12px;
@@ -382,6 +418,33 @@
         </div>
     </section>
 
+    <!-- About This Course Section -->
+    <section class="container about-section">
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>About This Course</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content about-content">
+                <p>College Physics is algebra-based physics, meaning it uses algebra and trigonometry rather than calculus. In many U.S. high schools it's taken in the junior or senior year, though it's designed to work as a first-year college course. Before starting, you should be comfortable with trigonometry, basic geometry, and algebra, including quadratic equations.</p>
+
+                <h4>Algebra-Based vs. Calculus-Based Physics</h4>
+                <p>This course, and this video library, cover algebra-based physics. There's also a calculus-based version, often called University Physics or AP Physics C, typically required for physics, engineering, and similar majors. Algebra-based physics is a common choice for life sciences, pre-health fields, or a general science requirement. If you're not sure which one your intended major needs, check with an advisor before choosing.</p>
+
+                <h4>Broad Topics in Physics</h4>
+                <ul>
+                    <li><strong>Mechanics</strong>: motion, forces, energy, momentum, rotational motion, and equilibrium</li>
+                    <li><strong>Fluids</strong>: fluid statics and fluid dynamics</li>
+                    <li><strong>Thermodynamics</strong>: heat, temperature, and energy transfer</li>
+                    <li><strong>Electricity and Magnetism</strong>: electric charge, circuits, magnetic fields, and induction</li>
+                    <li><strong>Waves and Optics</strong>: sound, light, and wave behavior</li>
+                    <li><strong>Modern Physics</strong>: an introduction to relativity and quantum concepts</li>
+                </ul>
+                <div class="about-note">This video library currently covers Mechanics and Fluids (Chapters 1 through 12), which lines up closely with the AP Physics 1 curriculum. The remaining topics may be added later.</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Resources Section -->
     <section class="container resources">
         <h2>Course Resources</h2>
@@ -402,6 +465,12 @@
                 <h3>YouTube Playlist</h3>
                 <p>All video lectures in one convenient playlist.</p>
                 <a href="https://youtube.com/playlist?list=PLKFCuwEE3ftY&si=iTddmnRyz0EBPrZV" target="_blank">View Playlist →</a>
+            </div>
+
+            <div class="resource-link">
+                <h3>How to Study Physics</h3>
+                <p>Practical tips for solving problems and building good habits.</p>
+                <a href="study-tips.html">Read Study Tips →</a>
             </div>
         </div>
     </section>
